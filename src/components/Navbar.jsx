@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import logo from '../assets/logo-ZI0GjuoS.png';
 import { CalendarCheck, Menu, Play } from './icons';
 import useActiveSection from '../hooks/useActiveSection';
@@ -17,6 +17,15 @@ const IDS = LINKS.map(([id]) => id);
 export default function Navbar({ onStartTour, onOpenDemo }) {
   const [open, setOpen] = useState(false);
   const active = useActiveSection(IDS, 'home');
+
+  useEffect(() => {
+    if (!open) return;
+    const handleKey = (e) => {
+      if (e.key === 'Escape') setOpen(false);
+    };
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [open]);
 
   return (
     <header className="nav-floating-wrap">

@@ -112,6 +112,10 @@ export default function HowItWorks() {
         onMouseLeave={() => {
           if (selectedStep === null) setIsPaused(false);
         }}
+        onTouchStart={() => setIsPaused(true)}
+        onTouchEnd={() => {
+          if (selectedStep === null) setIsPaused(false);
+        }}
         onClick={() => {
           if (selectedStep === null) setIsPaused(!isPaused);
         }}
