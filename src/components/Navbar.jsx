@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo-ZI0GjuoS.png';
 import { CalendarCheck, Menu, Play } from './icons';
 import useActiveSection from '../hooks/useActiveSection';
 

@@ -1,4 +1,4 @@
-import logo from '../assets/logo.png';
+import logo from '../assets/logo-ZI0GjuoS.png';
 import { Mail, Phone, MapPin } from './icons';
 
 export default function Footer() {

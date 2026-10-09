@@ -1,6 +1,6 @@
 import { forwardRef, useCallback, useEffect, useImperativeHandle, useRef, useState } from 'react';
-import logo from '../assets/logo.png';
-import heroBgImg from 'C:/Users/acer/.gemini/antigravity/brain/b2009b85-97ef-4039-8058-67b773f37d00/.user_uploaded/media_1791452197686.jpg';
+import logo from '../assets/logo-ZI0GjuoS.png';
+import heroBgImg from '../assets/hero-bg.jpg';
 import { ArrowDown, ArrowUpRight, BarChart3, CalendarCheck, ChevronLeft, ChevronRight, FileCheck, LayoutDashboard, LineChart, Package, Play, Pointer, Receipt, Settings, Ship, Sparkles, Users } from './icons';
 import { prefersReducedMotion } from '../hooks/useReducedMotion';
 

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo-ZI0GjuoS.png';
 import { ArrowUpRight, CalendarCheck, X } from './icons';
 
 // Change this to the address that should receive demo requests.

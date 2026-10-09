@@ -1,9 +1,9 @@
 import Reveal from './Reveal'
 import { Coins, Container, Plane, Ship, Truck } from './icons'
 
-import airImg from 'C:/Users/acer/.gemini/antigravity/brain/b2009b85-97ef-4039-8058-67b773f37d00/.user_uploaded/media_1791445978432.png'
-import shipImg from 'C:/Users/acer/.gemini/antigravity/brain/b2009b85-97ef-4039-8058-67b773f37d00/.user_uploaded/media_1791446062654.jpg'
-import truckImg from 'C:/Users/acer/.gemini/antigravity/brain/b2009b85-97ef-4039-8058-67b773f37d00/.user_uploaded/media_1791446105033.png'
+import airImg from '../assets/air-freight.png';
+import shipImg from '../assets/ship-freight.jpg';
+import truckImg from '../assets/truck-freight.png';
 
 export default function Markets() {
   return (
