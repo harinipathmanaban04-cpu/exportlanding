@@ -10,7 +10,7 @@ export default function Markets() {
     <section id="markets">
       <div className="wrap">
         <Reveal className="sec-head" as="div">
-          <h2>Quote in the buyer's currency, on the buyer's <em>terms.</em></h2>
+          <h2>Quote in the buyer's currency, on the buyer's terms.</h2>
           <p>
             Track every consignment by the mode it actually travels, across air, sea, and overland road networks.
           </p>

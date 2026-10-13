@@ -5,7 +5,7 @@ export default function About() {
     <section id="about" className="alt">
       <div className="wrap about-grid">
         <div>
-          <h2>Built for businesses that sell across <em>borders.</em></h2>
+          <h2>Built for businesses that sell across borders.</h2>
           <p>
             Export paperwork usually lives in spreadsheets, email threads and a few people's heads. Master Export Pro puts it in a single system, so a buyer's details are typed once and appear on the enquiry, the quotation, the shipment and the invoice.
           </p>

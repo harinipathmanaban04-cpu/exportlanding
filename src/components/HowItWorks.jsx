@@ -96,7 +96,7 @@ export default function HowItWorks() {
         <Reveal className="wf-header" as="div">
           <div className="wf-heading-block">
             <h2 className="wf-title">
-              One workflow, from first enquiry<br className="wf-br" />to final <em>payment.</em>
+              One workflow, from first enquiry<br className="wf-br" /> to final payment.
             </h2>
             <p className="wf-subtitle">
               Each stage hands its details to the next, so the order never has to be re-entered.

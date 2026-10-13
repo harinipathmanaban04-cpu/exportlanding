@@ -28,7 +28,7 @@ export default function Contact({ onOpenDemo }) {
             <span>GET IN TOUCH</span>
           </div>
           <h2>
-            Ready to accelerate your export <em>operations</em>?
+            Ready to accelerate your export operations?
           </h2>
           <p>
             Connect directly with our global trade team. Get a customized demo, technical consultation, or enterprise quote tailored to your shipping corridors.

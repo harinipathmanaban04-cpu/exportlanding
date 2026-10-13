@@ -33,7 +33,7 @@ export default function Navbar({ onStartTour, onOpenDemo }) {
         <a className="brand" href="#home" aria-label="Master Export Pro home">
           <img src={logo} alt="Master Export Pro" className="brand-logo-img" />
           <span className="brand-name">
-            Master Export <em>Pro</em>
+            Master Export <span>Pro</span>
           </span>
         </a>
 

@@ -11,7 +11,7 @@ export default function Footer() {
             <a href="#" className="footer-brand-link">
               <img src={logo} alt="Master Export Pro" className="footer-logo-img" />
               <div className="footer-brand-title">
-                Master Export <em>Pro</em>
+                Master Export <span>Pro</span>
               </div>
             </a>
             

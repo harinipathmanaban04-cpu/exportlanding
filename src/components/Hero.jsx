@@ -34,7 +34,7 @@ const Hero = forwardRef(function Hero({ onStartTour, onOpenDemo }, ref) {
   const [hl, setHl] = useState(-1);
   const [touring, setTouring] = useState(false);
   const [idx, setIdx] = useState(0);
-  const [callout, setCallout] = useState({ show: false, text: '', top: null });
+  const [callout, setCallout] = useState({ show: false, text: '', top: null, arrowLeft: null });
   const [cursor, setCursor] = useState({ show: false, left: null, top: null });
   const [running, setRunning] = useState(false);
   const [runKey, setRunKey] = useState(0);
@@ -49,7 +49,19 @@ const Hero = forwardRef(function Hero({ onStartTour, onOpenDemo }, ref) {
   };
 
   const place = (i) => {
-    setCallout({ show: true, text: STEPS[i][1], top: isDesktop() ? itemPos(i).y : null });
+    if (isDesktop()) {
+      setCallout({ show: true, text: STEPS[i][1], top: itemPos(i).y, arrowLeft: null });
+    } else {
+      const m = mockRef.current?.getBoundingClientRect();
+      const r = itemRefs.current[i]?.getBoundingClientRect();
+      let arrowLeft = '50%';
+      if (m && r) {
+        const centerInMock = r.left - m.left + r.width / 2;
+        const clamped = Math.max(28, Math.min(m.width - 28, centerInMock));
+        arrowLeft = `${clamped - 12}px`;
+      }
+      setCallout({ show: true, text: STEPS[i][1], top: null, arrowLeft });
+    }
   };
 
   const highlight = (i) => {
@@ -62,6 +74,9 @@ const Hero = forwardRef(function Hero({ onStartTour, onOpenDemo }, ref) {
         block: 'nearest',
         behavior: prefersReducedMotion() ? 'auto' : 'smooth',
       });
+      setTimeout(() => {
+        if (mockRef.current && itemRefs.current[i]) place(i);
+      }, 240);
     }
   };
 
@@ -203,7 +218,7 @@ const Hero = forwardRef(function Hero({ onStartTour, onOpenDemo }, ref) {
         <div className="wrap">
           <div className="hero-content centered">
             <h1 className="hero-title">
-              Give your exports the system they <em>deserve.</em>
+              Give your exports the system they deserve.
             </h1>
 
             <p className="hero-lead">
@@ -327,6 +342,19 @@ const Hero = forwardRef(function Hero({ onStartTour, onOpenDemo }, ref) {
                       </div>
                     </div>
                   </aside>
+
+                  <div
+                    className={'callout' + (callout.show ? ' show' : '')}
+                    id="callout"
+                    role="status"
+                    aria-live="polite"
+                    style={{
+                      ...(callout.top != null ? { top: callout.top } : {}),
+                      ...(callout.arrowLeft != null ? { '--arrow-left': callout.arrowLeft } : {}),
+                    }}
+                  >
+                    {callout.text}
+                  </div>
 
                   <div className="main">
                   <div className={panelCls('dashboard')} data-p="dashboard">
@@ -620,7 +648,6 @@ const Hero = forwardRef(function Hero({ onStartTour, onOpenDemo }, ref) {
                   </div>
                 </div>
               </div>
-              <div className={'callout' + (callout.show ? ' show' : '')} id="callout" role="status" aria-live="polite" style={callout.top != null ? { top: callout.top } : undefined}>{callout.text}</div>
               <div className={'cursor' + (cursor.show ? ' show' : '')} id="cursor" aria-hidden="true" ref={cursorRef} style={{ left: cursor.left ?? undefined, top: cursor.top ?? undefined }}>
                 <Pointer />
               </div>

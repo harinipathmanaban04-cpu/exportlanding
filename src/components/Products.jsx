@@ -55,7 +55,7 @@ export default function Products() {
     <section id="products">
       <div className="wrap">
         <Reveal className="sec-head" as="div">
-          <h2>Everything an export order <em>touches.</em></h2>
+          <h2>Everything an export order touches.</h2>
           <p>Six modules, each one matching a part of the day-to-day work.</p>
         </Reveal>
         <Reveal className="bento" as="div">

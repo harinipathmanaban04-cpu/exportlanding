@@ -6,7 +6,7 @@ export default function Services() {
     <section id="services" className="alt">
       <div className="wrap">
         <Reveal className="sec-head" as="div">
-          <h2>The documents your buyers <em>expect.</em></h2>
+          <h2>The documents your buyers expect.</h2>
           <p>Generated from the order record, so nothing is retyped.</p>
         </Reveal>
         <Reveal className="svc" as="div">
